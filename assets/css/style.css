@@ -1,0 +1,615 @@
+/* @font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/Avenir/AvenirNext-Regular.ttf') format('truetype');
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500&display=swap'); */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.font-family-times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.font-family-avenir {
+    /* font-family: 'Avenir'; */
+}
+
+.font-family-sans-pro {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    /* font-family: 'Avenir'; */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300 !important;
+}
+
+/* Overriding bootstrap opacity for modal */
+.modal-backdrop.show {
+    opacity: .7 !important;
+}
+
+@media (max-width: 425px) {
+    .navbar .form-inline {
+        width: 100%!important;
+    }
+}
+
+.nav-link {
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    padding: 0rem 1rem;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.nav-link-cart {
+    white-space: nowrap;
+    border: 1px solid #FF5A5F;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    background: #FF5A5F;
+    color: #FFF;
+}
+
+.search-section-container {
+    /* min-height: 60%; */
+    background: url('http://localhost/online-scooter/assets/images/ola_banner.webp'), #1e2123;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-content {
+    margin-top: 6rem;
+}
+
+@media (max-width: 425px) {
+    .main-content {
+        margin-top: 5rem;
+    }    
+}
+
+.search-section {
+    /* height: 100%;  */
+    min-height: 100%;
+}
+
+#searchModal .modal-dialog, .searchModal .modal-dialog {
+    max-width: 400px;
+}
+
+.search-params .form-control {
+    height: 2.5 rem!important;
+    background-color: #FFF;
+}
+
+@media (min-width: 768px) {
+    .search-params .form-control {
+        height: 2.5 rem!important;
+        padding: 1.5rem 1rem;
+    }
+
+    .search-params select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0rem 1rem !important; /* if vertical padding is given, text is invisible */
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057 !important;
+        background-color: #fff;
+        height: 3.2rem;
+    }
+
+    .search-params .form-group {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.about-section-one {
+    background: url(https://onlinescootybooking.in/assets/images/about_background.webp);
+    background-position: center;
+    color: #fff;
+    min-height: 25em;
+}
+
+.color-brand, .text-brand {
+    color: #FF5A5F;
+}
+
+.text-black {
+    color: #000!important;
+}
+
+.text-green {
+    color: #388E3C;
+}
+
+.bg-brand {
+    background-color: #FF5A5F;
+}
+
+.bg-yellow {
+    background-color: #fed250;
+}
+
+.border-brand {
+    border-color: #FF5A5F;
+}
+
+.add-remove-action .input-group-text {
+    border-color: #FF5A5F;
+}
+
+.add-remove-action .form-control {
+    height: 2.5 rem!important;
+    font-weight: bold;
+    width: 45px;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+}
+
+.btn-brand {
+    background-color: #FF5A5F;
+    border: #FF5A5F;
+    padding: 0.6rem;
+}
+
+.btn-brand:focus, .btn-brand:hover, .btn-brand:active {
+    background-color: #ff444A !important;
+    border: #ff444A !important;
+}
+
+.btn-brand-cart {
+    background-color: #fff!important;
+    opacity: 0.9;
+    border: 1px solid #fff !important;
+    color: #000;
+}
+
+.btn-brand-cart:focus, .btn-brand-cart:hover, .btn-brand-cart:active {
+    background-color: #fff!important;
+    border: 1px solid #ff444A !important;
+    opacity: 1;
+    color: #000;
+}
+
+.header-h1 {
+    font-size: 3rem;
+}
+
+@media (max-width: 576px) {
+    .header-h1 {
+        font-size: 2rem;
+    }    
+}
+
+.footer {
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background: #000;
+}
+
+.footer-link {
+    color: white !important;
+    font-size: 0.9rem;
+}
+
+footer h5 {
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+.section-seo .h1 {
+    font-size: 2.5rem;
+    font-weight: 700 !important;
+}
+
+.section-seo h2 {
+    font-size: 1.2rem;
+    font-weight: 400 !important;
+}
+
+.section-seo h3 {
+    font-size: 1.2rem;
+}
+
+.section-seo h4 {
+    font-size: 1rem;
+}
+
+.short-content a.collapsed:after {
+    content: '+ Show More';
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.short-content a:not(.collapsed):after {
+    content: '- Show Less';
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.short-content #contentCollapse.collapse:not(.show) {
+    display: block;
+    /* height = lineheight * no of lines to display */
+    height: 15em;
+    overflow: hidden;
+}
+
+.short-content #contentCollapse.collapsing {
+    height: 15em;
+}
+
+#owl-top-cities .item {
+    background: #FFFFFF;
+    margin: 10px;
+    color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#owl-promotions .item {
+    background: #FFFFFF;
+    margin: 10px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.navigate-cart {
+    height: calc(1.5em + .75rem + 2px);
+    width: 45px;
+    border: 1px solid #FFF;
+    border-radius: .25rem;
+}
+
+.link-no-decoration, .link-no-decoration:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Sidebar */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 1050;
+    background: #ffffff;
+    /* color: #fff; */
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar #dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    /* background: #7386D5; */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#sidebar #dismiss:hover {
+    /* background: #fff; */
+    color: #7386D5;
+}
+
+#sidebar .sidebar-header {
+    padding: 1rem;
+    background: #EEE;
+}
+
+#sidebar ul li a {
+    padding: 0.3rem 1.5rem;
+    /* font-size: 1.1em; */
+    display: block;
+    text-decoration: none;
+}
+
+#sidebar ul li.active>a, a[aria-expanded="true"] {
+    color: #000000;
+    /* background: #6d7fcc; */
+}
+
+#sidebar .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+#sidebar ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #FFF;
+}
+
+/* Required for sidebar */
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* END - Sidebar */
+
+/* Payment modal */
+.modal-payment-status {     
+    color: #636363;
+    max-width: 350px;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-payment-status .modal-content {
+    border-radius: 5px;
+    border: none;
+}
+.modal-payment-status .modal-header {
+    border-bottom: none;   
+    position: relative;
+    justify-content: center;
+}
+
+.modal-payment-status .status-image {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -3rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    z-index: 9;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-payment-status .status-image img {
+    width: 100%;
+}
+/* END - Payment modal */
+
+/* Snackbar */
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 500px;
+    padding: 8px 32px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+  
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/* END - Snackbar */
+
+.search-card-title {
+    margin-top: -0.6rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: #FFFFFF;
+}
+
+.search-vehicle-card-title {
+    margin-top: -1.9rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: #FFFFFF;
+}
+
+.vehicle-booking-stats {
+    font-size: 0.8rem;
+    border-radius: 100px;
+    padding: 2px 12px;
+}
+
+.vehicle-booking-stats-danger {
+    background-color: #f44336;
+    color: #FFFFFF;
+}
+
+.section-loading {
+    min-height:70vh;
+}
+
+@media (min-width: 768px) {
+    .section-legal {
+        margin-top: 7rem;
+    }
+}
+
+/* Datetime picker */
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
+    background: #FF5A5F;
+    box-shadow: #ff444A 0 1px 3px 0 inset;
+    color: #fff;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+    color: #000000;
+}
+/* END - Datetime picker */
+
+/* Utility */
+.mt-45 {
+    margin-top: 2rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mt-6 {
+    margin-top: 6rem;
+}
+
+.mt-7 {
+    margin-top: 7rem;
+}
+
+.mt-8 {
+    margin-top: 8rem;
+}
+
+.pb-5 {
+    padding-bottom: 5rem;
+}
+
+.pb-6 {
+    padding-bottom: 6rem;
+}
+
+.pb-7 {
+    padding-bottom: 7rem;
+}
+
+.pb-8 {
+    padding-bottom: 8rem;
+}
+
+.opacity-0 {
+    opacity:0!important;
+}
+
+.opacity-1 {
+    opacity:0.2!important;
+}
+
+.opacity-2 {
+    opacity:0.4!important;
+}
+
+.opacity-3 {
+    opacity:0.6!important;
+}
+
+.opacity-4 {
+    opacity:.8!important;
+}
+
+.opacity-5 {
+    opacity:1!important;
+}
+/* END - Utility */
+
+
+/* Blog */
+
+.blog>a:hover, .blog-link, .blog-link:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #FF5A5F;
+    border-color: #FF5A5F;
+}
+
+/* END - Blog */
+
+.click-to-top-container {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    left:40px;
+    background-color:#FFF;
+    color:#FF5A5F;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 10001;
+}
+
+.click-to-top {
+    margin-top:22px;
+}
+
+.scooter_variants_row .card_content {  margin-top: 15px; }
+
+.scooter_variants_row .card { border:none !important; }

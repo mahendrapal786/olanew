@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/favicon.ico" rel="icon" type="image/png">
+        <title>Online Scooter Booking</title>
+    <meta name="title" content="Online Scooter">
+<meta name="description" content="Rent a two-wheeler from the best scooter rental company in India.">
+
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+<link href="assets/css/datetimepicker.css" rel="stylesheet">
+<link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+<link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<style>
+html, body, #content {
+    min-height: 100% !important;
+    height: 100%;
+}
+</style>  
+
+<style>
+    label.error {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .error{
+        color:red;
+    }
+    .n_error {
+        background: #fde4e1 none repeat scroll 0 0;
+        border: 1px solid #b16a6c;
+        border-radius: 3px;
+        margin: 0 0 20px;
+        padding: 1px;
+    } 
+    .n_success {
+        margin: 0 0 20px;
+        padding: 1px;
+        color: green;
+    }
+    .reload-captcha{
+        cursor: pointer;
+    }
+    .form_msg_error {
+        font-size: 20px;
+    color: red;
+    padding-bottom: 15px;
+    text-align: center;
+        
+    } .form_msg_success {
+        font-size: 20px;
+    color: green;
+    padding-bottom: 15px;
+    text-align: center;
+        
+    }
+</style>
+
+</head>
+
+<body>
+ 
+    
+    <div class="wrapper">
+
+     
+
+        <div id="content">
+
+     
+<div class="container-fluid search-section-container d-lg-flex flex-column justify-content-between" ng-controller="HomeController">
+
+    <nav class="navbar navbar-expand-lg navbar-dark pt-3 border-0">
+
+    <div id="openSidebar" class="d-lg-none">
+        <span class="navbar-toggler-icon bg-transparent"></span>
+    </div>
+
+    <a class="navbar-brand" href="/">
+        <img src="assets/images/sukuto-white-bg-transparent.svg" height="40" />
+        <!-- <img src="assets/images/sukuto-bg-transparent.svg" height="40" /> -->
+    </a>
+
+    <!-- Navbar only for desktop -->
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href="/monthly-bike-rental">Monthly rental</a>
+            </li> -->
+            <li class="nav-item active">
+                <a class="nav-link" href="tel:+919905175292"><img src="assets/images/whatsapp.svg" class="img-fluid mr-1" width="15" /> +91-9905175292</a>
+            </li>
+            <li class="nav-item active ml-2">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+           
+            
+            
+            
+           
+        </ul>
+    </div>
+    <!-- END - Navbar only for desktop -->
+
+</nav>
+    <div class="container mt-3 mt-lg-auto">
+        <div class="row search-section">
+
+            <!-- This is shown in mobile only -->
+            <div class="col-md-7 d-block d-md-none pt-4 my-auto text-center text-white">
+                                    <div class="font-family-times font-weight-bold header-h1">Online Scooter Book</div>
+                  
+                                
+            </div>
+            <!-- END - This is shown in mobile only -->
+
+            <div class="col-md-5 my-auto">
+                                <div class="card mt-2">
+                                    
+                                    <form action="" name="applicant-register" method="post" accept-charset="utf-8">
+              
+                                    
+                    <div class="card-body search-params py-4">
+                       
+                       
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+
+                                    <label for="start">First Name</label>
+                                    <input type="text" name="first_name" class="form-control" placeholder="First Name"> 
+                                    
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+
+                                    <label for="start">Last Name</label>
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name"> 
+                                    
+
+                                </div>
+                            </div>
+                          
+                        </div>
+
+
+                         <div class="form-group mt-2 mt-lg-4">
+                            <label for="email">Email Address</label>
+                          <input type="email" name="email_address" class="form-control" placeholder="Email Address"> 
+                        </div>
+                         <div class="form-group mt-2 mt-lg-4">
+                            <label for="number">Mobile Number</label>
+                          <input type="text" name="mobile_number" class="form-control" placeholder="Mobile Number"> 
+                        </div>
+
+                         <div class="form-group">
+                            <label for="number">Variants</label>
+                            <select name="variants" class="custom-select" required>
+                              <option value="">Select Variants</option>
+                              <option value="S1 Air">S1 Air</option>
+                              <option value="S1">S1</option>
+                              <option value="S1 Pro">S1 Pro</option>
+                            </select>
+                           <!--  <div class="invalid-feedback">Example invalid custom select feedback</div> -->
+                          </div>
+
+                        <div class="d-flex justify-content-between mt-3">
+                           
+                          <input type="submit" name="book_submit" class="btn px-4 btn-primary" value="Book Now">
+                        </div>
+
+                        <div class="text-center mt-4 book_status"></div>
+                    </div>
+                      </form>  
+                </div>
+                <div class="text-white mt-3">
+                   
+                    <div class="text-center">Call <u><a class="text-white" target="_blank" href="tel:9905175292">+91-9905-175-292</a></u>
+                        for best prices</div>
+                </div>
+            </div>
+
+            <!-- This is shown in desktop only -->
+            <div class="col-md-7 my-auto text-center text-white">
+                                    <div class="d-none d-md-block">
+                        <div class="font-family-times font-weight-bold header-h1">Online Scooter Book</div>
+                       
+                    </div>
+                                <div class="d-none d-md-block">
+                    <a ng-show="cartCount > 0" href="/cart" class="btn btn-primary mt-4 px-3 btn-brand btn-brand-cart ng-cloak">
+                        {{ cartCount }} {{ cartCount > 1 ? 'vehicles' : 'vehicle' }} in cart, checkout now <i class="ml-1 fa fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- END - This is shown in desktop only -->
+
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4 mt-lg-auto">
+        <div class="row">
+            <div class="col-md-12 pb-2 text-right">
+                <small class="text-white">&nbsp;<u><a class="text-white" target="_blank" href="#">&nbsp;</a></u></small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collect Leads Modal -->
+    <div class="modal fade" id="promotionLeadModal" tabindex="-1" role="dialog" aria-labelledby="promotionLeadModalLabel" aria-hidden="true" ng-controller="UserSignupController">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0 rounded">
+                    <div class="row m-0">
+                        <div class="col-md-6 p-0" style="background: url(assets/images/promotion-lead-2.jpg);background-repeat:no-repeat;background-size:cover;background-position:left;border-radius:0.2rem 0 0 0.2rem;">
+                            <img src="assets/images/promotion-lead-2.jpg" class="img-fluid d-block d-md-none" />
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <div class="pr-4 pl-4 pb-4 pt-3 mb-1 mb-md-1">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <div class="h4 text-center text-brand mt-2 mt-md-3">20% Discounted Prices!</div>
+                                <div class="text-center mt-3 mt-md-5">You are only one ride away from a good mood, give your daily life a boost with the twist of a throttle and enjoy pre applied 20% discount only on Online Scooter.</div>
+                                <div class="text-black mt-3 mt-md-5">Just enter your mobile number</div>
+                                <div class="d-flex text-black mt-2">
+                                    <input ng-model="promotion.mobile" type="text" class="form-control mt-auto" placeholder="Mobile">
+                                    <button ng-click="promotionCallback(promotion.mobile);" class="btn btn-sm btn-brand text-white ml-2" style="white-space: nowrap;">Get Call Back</button>
+                                </div>
+                                <div class="text-justify mt-3" style="font-size:0.7rem;">I, hereby authorize Online Scooter Pvt. Ltd., to contact me. It will override my registry on the NCPR. By providing your contact details you have expressly authorized TTPL to contact you in future through calls / SMS / E-mails and inform you about our products. You accept Online Scooter <a target="_blank" href="#">Terms & Conditions</a></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END - Collect Leads Modal -->
+
+</div>
+<!-- END - first fold -->
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="h1 font-family-times font-weight-bold text-center">We Believe in transparency</h2>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="row text-md-left">
+                    <div class="col-4 col-md-2 my-auto">
+                        <img class="img-fluid rounded-circle" src="assets/images/ola_electric_icon.png" />
+                    </div>
+                    <div class="col-8 col-md-9 mt-3 mt-md-0">
+                        <h5 class="font-weight-normal">Best vehicles</h5>
+                        <div>We have our vehicles serviced regularly thus keeping them ready for your use whenever you need to hit the road!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row text-md-left mt-5 mt-md-0">
+                    <div class="col-4 col-md-2 my-auto d-none d-md-block">
+                        <img class="img-fluid rounded-circle" src="assets/images/benefits_support.webp" />
+                    </div>
+                    <div class="col-8 col-md-9 mt-3 mt-md-0">
+                        <h5 class="font-weight-normal">Customer support</h5>
+                        <div>Award winning customer support ready to help you 24x7. Call us any time!</div>
+                    </div>
+                    <div class="col-4 col-md-2 my-auto d-block d-md-none">
+                        <img class="img-fluid rounded-circle" src="assets/images/benefits_support.webp" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="row text-md-left">
+                    <div class="col-4 col-md-2 my-auto">
+                        <img class="img-fluid rounded-circle" src="assets/images/benefits_deposit.webp" />
+                    </div>
+                    <div class="col-8 col-md-9 mt-3 mt-md-0">
+                        <h5 class="font-weight-normal">Deposit safety</h5>
+                        <div>Your security deposit is safe! It will be returned to you after the trip</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row text-md-left mt-5 mt-md-0">
+                    <div class="col-4 col-md-2 my-auto d-none d-md-block">
+                        <img class="img-fluid rounded-circle" src="assets/images/benefits_low_price.webp" />
+                    </div>
+                    <div class="col-8 col-md-9 mt-3 mt-md-0">
+                        <h5 class="font-weight-normal">Lowest prices</h5>
+                        <div>A wide range of bikes available for the lowest prices across the Internet</div>
+                    </div>
+                    <div class="col-4 col-md-2 my-auto d-block d-md-none">
+                        <img class="img-fluid rounded-circle" src="assets/images/benefits_low_price.webp" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+             
+                <h2 class="h1 font-family-times font-weight-bold text-center mt-3">
+                    There’s an S1 for <br>everyone
+                </h2>
+            </div>
+        </div>
+        <div class="row mt-4 scooter_variants_row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card_layout">
+                        <div class="card_img">
+                           <img src="assets/images/ola_s1_air.png" height="222" width="304" alt="ola s1 air" class="advancedScooter_cardImage__J67HU" title="" loading="lazy">
+                        </div>
+                       <div class="card_content">
+                        Ola has equipped the S1 Air with a hub-mounted motor. Its peak power is rated at 4.5kW and the battery capacity is 2.5kWh. Ola claims the S1 Air’s true range is 128km and the top speed is 95kmph.
+                        </div>
+                       </div> 
+                       
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card_layout">
+                        <div class="card_img">
+                           <img src="assets/images/ola_s1.webp" height="222" width="304" alt="ola s1 air" class="advancedScooter_cardImage__J67HU" title="" loading="lazy">
+                        </div>
+                       <div class="card_content">
+                            OLA S1 is an electric scooter available in only 1 variant and 5 colours. OLA S1 generates 5500 W power from its motor. With both front and rear disc brakes, OLA S1 comes up with combined braking system of both wheels.
+                        </div>
+                       </div> 
+                       
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card_layout">
+                        <div class="card_img">
+                           <img src="assets/images/ola_s1_pro.webp" height="222" width="304" alt="ola s1 air" class="advancedScooter_cardImage__J67HU" title="" loading="lazy">
+                        </div>
+                       <div class="card_content">
+                           The Ola S1 Pro is the premium variant of the S1 electric scooter range from Ola Electric. This variant of the S1 range packs higher specifications and features more colour options than the standard S1 electric scooter.
+                        </div>
+                       </div> 
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid mt-5 section-seo">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="h1 font-family-times font-weight-bold">From Ola to Ola Electric</h2>
+                
+            </div>
+        </div>
+        <div class="row mt-4 px-4">
+            <div class="col-md-12">
+                <p style="text-align: justify;">At the heart of Ola Electric is our vision to reduce global emissions and fossil fuel dependency by making India the epic centre of electrification. For this to become a reality, we aim to not just make electric vehicles but engineer a change in the mindsets of every Indian, a change that powers the vision behind Mission Electric.</p>            </div>
+        </div>
+    </div>
+
+
+
+
+
+            <!-- END - View content -->
+
+            <!-- Footer -->
+            <div class="jumbotron footer mt-5">
+    <div class="container-fluid">
+        <footer class="pt-4 px-4 pt-md-5">
+            <div class="row">
+                <div class="col-12 col-md text-center">
+                    <img class="mb-4" src="assets/images/sukuto-white-bg-transparent.svg" alt="" height="50">
+                    <small class="d-block mb-3 text-white">Online Scooter<br> Pvt. Ltd.</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="footer-link" href="index.html">Home</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="footer-link" href="javascript:void(0)">Privacy policy</a></li>
+                        <li><a class="footer-link" href="javascript:void(0)">Terms</a></li>
+                      
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Social</h5>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <a class="footer-link" rel="nofollow" target="_blank" href="https://www.instagram.com">Instagram</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" rel="nofollow" target="_blank" href="https://www.facebook.com">Facebook</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" rel="nofollow" target="_blank" href="https://www.linkedin.com">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+           
+    </div>            <!-- END - Footer -->
+
+        </div>
+
+        <!-- Overlay element for sidebar -->
+        <div class="overlay"></div>
+        <!-- END - Overlay element for sidebar -->
+
+    </div>
+
+    <div id="snackbar"></div>
+    <div class="click-to-top-container d-none">
+        <i class="fa fa-arrow-up click-to-top"></i>
+    </div>
+
+
+ 
+
+<script src="assets/js/fontawesome.js"></script>
+<script src="assets/js/fontawesome.solid.js"></script>
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.carousel/owl.carousel.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="assets/js/jquery.validate.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            $("form[name='applicant-register']").validate({
+                rules: {
+                    'first_name': {
+                        required: true,
+                    },
+                    'last_name': {
+                        required: true,
+                    },
+                    'email_address': {
+                        required: true,
+                        email: true,
+                    },
+                    'mobile_number': {
+                        required:true,
+                        minlength:10,
+                        maxlength:10,
+                        number: true
+                    },
+                   
+                }
+            });
+
+
+            $("form[name='availability-number']").validate({
+                rules: {
+                  
+                    'check_number': {
+                        required:true,
+                        minlength:10,
+                        maxlength:10,
+                        number: true
+                    },
+                   
+                }
+            });
+
+
+
+        });
+       
+    })(jQuery);
+</script>
+
+
+</body>
+</html>
